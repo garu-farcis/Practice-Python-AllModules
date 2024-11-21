@@ -14,8 +14,16 @@ def unionarray():
     c= []
     for i in range(len(a)):
         c.append(a[i])
-
-    print(c)
+    for i in range(len(b)):
+        c.append(b[i])
+    #removing duplicates from c
+    final_lst=[]
+    freq=set()
+    for i in c:
+       if i not in freq:
+           final_lst.append(i)
+           freq.add(i)
+    print(final_lst)
 
 unionarray()
 
